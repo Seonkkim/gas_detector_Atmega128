@@ -3,7 +3,7 @@
 #include <avrdef.h>
 #define F_CPU 16000000
 
- void ADC_init(void); // ADC초기 설정
+void ADC_init(void); // ADC초기 설정
 unsigned int ADConversion(int ch); // ADC 실행
 void Data(unsigned char data);
 void delay_ms(unsigned int m);
@@ -24,8 +24,8 @@ UBRR1H=0;
 UBRR1L=16;
 SEI();
 
- while(1){
-    ch_ADC = ADConversion(0);
+while(1){
+ch_ADC = ADConversion(0);
 
 if(500<ch_ADC)//6~4cm
  {
